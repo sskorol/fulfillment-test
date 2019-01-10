@@ -1,0 +1,35 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "lib": [
+      "es6"
+    ],
+    "types": [
+      "node",
+      "mocha",
+      "chai"
+    ],
+    "module": "commonjs",
+    "strict": true,
+    "moduleResolution": "node",
+    "declaration": true,
+    "removeComments": true,
+    "noImplicitAny": false,
+    "inlineSources": true,
+    "inlineSourceMap": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "typeRoots": [
+      "./node_modules/@types/",
+      "./types/"
+    ]
+  },
+  "include": [
+    "src/**/*",
+    "test/**/*"
+  ],
+  "exclude": [
+    "./node_modules/"
+  ],
+  "compileOnSave": false
+}

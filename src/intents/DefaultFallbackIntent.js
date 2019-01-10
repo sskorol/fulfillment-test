@@ -1,0 +1,19 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const BaseIntent_1 = require("./BaseIntent");
+class DefaultFallbackIntent extends BaseIntent_1.BaseIntent {
+    constructor(agent) {
+        super(agent);
+        this.intent = 'Default Fallback Intent';
+        this.defaultResponse = 'Sorry, I am not sure I got it. What would you like me to do?';
+        this.handle = this.handle.bind(this);
+    }
+    get name() {
+        return this.intent;
+    }
+    prepareResponse() {
+        return this.agent.getSystemMessage(this.defaultResponse);
+    }
+}
+exports.default = DefaultFallbackIntent;
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiRGVmYXVsdEZhbGxiYWNrSW50ZW50LmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiRGVmYXVsdEZhbGxiYWNrSW50ZW50LnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7O0FBQUEsNkNBQTBDO0FBSTFDLE1BQXFCLHFCQUFzQixTQUFRLHVCQUFVO0lBSTNELFlBQVksS0FBb0I7UUFDOUIsS0FBSyxDQUFDLEtBQUssQ0FBQyxDQUFDO1FBSkUsV0FBTSxHQUFXLHlCQUF5QixDQUFDO1FBQzNDLG9CQUFlLEdBQVcsOERBQThELENBQUM7UUFJeEcsSUFBSSxDQUFDLE1BQU0sR0FBRyxJQUFJLENBQUMsTUFBTSxDQUFDLElBQUksQ0FBQyxJQUFJLENBQUMsQ0FBQztJQUN2QyxDQUFDO0lBRUQsSUFBVyxJQUFJO1FBQ2IsT0FBTyxJQUFJLENBQUMsTUFBTSxDQUFDO0lBQ3JCLENBQUM7SUFFTSxlQUFlO1FBQ3BCLE9BQU8sSUFBSSxDQUFDLEtBQUssQ0FBQyxnQkFBZ0IsQ0FBQyxJQUFJLENBQUMsZUFBZSxDQUFDLENBQUM7SUFDM0QsQ0FBQztDQUNGO0FBaEJELHdDQWdCQyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IEJhc2VJbnRlbnQgfSBmcm9tICcuL0Jhc2VJbnRlbnQnO1xuaW1wb3J0IHsgZGlhbG9nZmxvdyB9IGZyb20gJy4uLy4uL3R5cGVzL2RpYWxvZ2Zsb3ctZnVsZmlsbG1lbnQnO1xuaW1wb3J0IFdlYmhvb2tDbGllbnQgPSBkaWFsb2dmbG93LmZ1bGZpbGxtZW50LldlYmhvb2tDbGllbnQ7XG5cbmV4cG9ydCBkZWZhdWx0IGNsYXNzIERlZmF1bHRGYWxsYmFja0ludGVudCBleHRlbmRzIEJhc2VJbnRlbnQge1xuICBwcml2YXRlIHJlYWRvbmx5IGludGVudDogc3RyaW5nID0gJ0RlZmF1bHQgRmFsbGJhY2sgSW50ZW50JztcbiAgcHJpdmF0ZSByZWFkb25seSBkZWZhdWx0UmVzcG9uc2U6IHN0cmluZyA9ICdTb3JyeSwgSSBhbSBub3Qgc3VyZSBJIGdvdCBpdC4gV2hhdCB3b3VsZCB5b3UgbGlrZSBtZSB0byBkbz8nO1xuXG4gIGNvbnN0cnVjdG9yKGFnZW50OiBXZWJob29rQ2xpZW50KSB7XG4gICAgc3VwZXIoYWdlbnQpO1xuICAgIHRoaXMuaGFuZGxlID0gdGhpcy5oYW5kbGUuYmluZCh0aGlzKTtcbiAgfVxuXG4gIHB1YmxpYyBnZXQgbmFtZSgpOiBzdHJpbmcge1xuICAgIHJldHVybiB0aGlzLmludGVudDtcbiAgfVxuXG4gIHB1YmxpYyBwcmVwYXJlUmVzcG9uc2UoKTogc3RyaW5nIHtcbiAgICByZXR1cm4gdGhpcy5hZ2VudC5nZXRTeXN0ZW1NZXNzYWdlKHRoaXMuZGVmYXVsdFJlc3BvbnNlKTtcbiAgfVxufVxuIl19
